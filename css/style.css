@@ -1,0 +1,276 @@
+/*/////////////////       header           ///////////////////////////*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.navbar .navbar-brand {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.navbar .collapse {
+  font-size: 20px;
+}
+.navbar-icons {
+  list-style-type: none;
+  margin-top: 20px;
+}
+.navbar-icons a i {
+  color: white;
+  font-size: 20px;
+  margin: 10px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: black;
+}
+.navbar-button {
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  cursor: pointer;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  background-color: black;
+  position: relative;
+  z-index: 0;
+}
+.navbar-button a {
+  color: white;
+  text-decoration: none;
+}
+.navbar-button::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: white;
+  transition: 0.5s;
+  z-index: -10;
+}
+.navbar-button:hover::after {
+  width: 100%;
+  height: 100%;
+}
+.navbar-button a:hover {
+  color: black;
+}
+.navbar-icons a i:hover {
+  color: black;
+  background-color: white;
+}
+/*////////////////////    welcome               ///////////////*/
+.welcome {
+  width: 100%;
+  height: auto;
+  background-image: url("../images/background2.jpg");
+  background-size: cover;
+  padding-top: 150px;
+}
+.welcome-all {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  width: 300px;
+  border: 1px solid white;
+  background-image: linear-gradient(to right, purple, rgb(2, 2, 66));
+  padding: 10px;
+  text-align: center;
+}
+.welcome-hi {
+  color: white;
+  font-size: 50px;
+}
+.welcome-hi #dynamic-text {
+  border-right: 4px solid gray;
+  animation: blink 1.06s step-end infinite;
+}
+.welcome-hello {
+  color: gray;
+  font-size: 20px;
+}
+.lets-connect {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  margin-top: 50px;
+  cursor: pointer;
+}
+.welcome-image {
+  width: 100%;
+  height: 100%;
+}
+.welcome-image img {
+  width: 70%;
+  height: 70%;
+  animation: bounce 3s linear infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/*///////////////////            skills           ///////////////////*/
+.skills {
+  width: 100%;
+  background-color: black;
+  background-size: cover;
+}
+.skills-container {
+  background-color: black;
+}
+.skills .skills-header {
+  color: white;
+  text-align: center;
+  padding-top: 30px;
+}
+.skills-header h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+.skills-header p {
+  font-size: 30px;
+}
+.skills-card {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.skills-card .skills-percent {
+  background-image: linear-gradient(to right, #161868, #214587, #1e98a8);
+  border-radius: 50%;
+  width: 175px;
+  height: 175px;
+  line-height: 175px;
+  margin: auto;
+  color: white;
+  font-size: 20px;
+}
+.skills-card .skills-card-body h4 {
+  color: white;
+  margin-top: 20px;
+  font-weight: bold;
+}
+.projects {
+  width: 100%;
+  background-color: black;
+  padding-bottom: 200px;
+}
+.projects .projects-header {
+  text-align: center;
+  color: white;
+  padding: 50px 0;
+}
+.projects-header h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.projects-item {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  cursor: pointer;
+}
+.projects-content .projects-item img {
+  width: 100%;
+  height: 100%;
+}
+.image-overlay {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 0;
+
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: 0.5s;
+  padding-top: 50px;
+}
+.projects-item:hover .image-overlay {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+}
+/* ///////////        footer          ///////////////*/
+.footer {
+  width: 100%;
+  height: auto;
+  background-image: url("../images/footer3.jpg");
+  background-size: cover;
+}
+.subscribe-items {
+  background-color: white;
+  padding: 50px 0;
+  border-radius: 50px;
+  position: relative;
+  top: -100px;
+  text-align: center;
+}
+.subscribe-item p {
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+}
+.subscribe-item-submit input {
+  width: 100%;
+  height: 70px;
+  border-radius: 30px;
+}
+.subscribe-item-submit .btn {
+  position: absolute;
+  border-radius: 30px;
+  top: 15px;
+  right: 20px;
+  background-image: linear-gradient(to right, purple, blue);
+  color: white;
+}
+.subscribe-item .btn:hover {
+  color: white;
+}
+.footer-logo h2 {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.footer-rights {
+  color: white;
+  text-align: end;
+}
+.footer-rights a i {
+  width: 40px;
+  height: 40px;
+  background: black;
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  color: white;
+}
+.footer-rights a i:hover {
+  color: black;
+  background-color: white;
+}
