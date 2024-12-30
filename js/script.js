@@ -107,54 +107,14 @@ drawInnerSkills(skillChunks);
 let projects = [
   {
     id: "1",
-    name: "landing page",
-    descrp: "Based on HTML & CSS",
-    image: "./images/project1.png",
-    codeLink: "https://github.com/MohamedOsama2001/FirstFrontendProject",
-    demoLink: "https://mohamedosama2001.github.io/FirstFrontendProject/",
-  },
-  {
-    id: "2",
-    name: "Rocker",
-    descrp: "Based on HTML5 & CSS3",
-    image: "./images/project2.jpg",
-    codeLink: "https://github.com/MohamedOsama2001/2nd_frontend_project",
-    demoLink: "https://mohamedosama2001.github.io/2nd_frontend_project/",
+    name: "E-Commerce",
+    descrp: "Based on React.js & Redux",
+    image: "./images/project10.jpg",
+    codeLink: "https://github.com/MohamedOsama2001/E-Commerce",
+    demoLink: "https://e-commerce-liard-xi-49.vercel.app/",
   },
   {
     id: "3",
-    name: "Egypt Tourism",
-    descrp: "Based on Bootstrap",
-    image: "./images/project3.jpg",
-    codeLink: "https://github.com/MohamedOsama2001/Egypt-Tourism",
-    demoLink: "https://mohamedosama2001.github.io/Egypt-Tourism/",
-  },
-  {
-    id: "4",
-    name: "ShoppingCart",
-    descrp: "Based on Java Script",
-    image: "./images/project4.jpg",
-    codeLink: "https://github.com/MohamedOsama2001/online-shopping",
-    demoLink: "https://mohamedosama2001.github.io/online-shopping/",
-  },
-  {
-    id: "5",
-    name: "VivaDecor",
-    descrp: "Based on HTML5 & CSS3",
-    image: "./images/project5.jpg",
-    codeLink: "https://github.com/MohamedOsama2001/LandingPage/",
-    demoLink: "https://mohamedosama2001.github.io/LandingPage/",
-  },
-  {
-    id: "6",
-    name: "To do List",
-    descrp: "Based on Java Script",
-    image: "./images/project6.jpg",
-    codeLink: "https://github.com/MohamedOsama2001/To-Do-List",
-    demoLink: "https://mohamedosama2001.github.io/To-Do-List/",
-  },
-  {
-    id: "7",
     name: "Dynamic weather app",
     descrp: "Based on React JS",
     image: "./images/project7.jpg",
@@ -162,20 +122,52 @@ let projects = [
     demoLink: "https://weather-app-opal-psi.vercel.app/",
   },
   {
-    id: "8",
-    name: "Exclusive",
-    descrp: "E-Commerce based on React JS",
-    image: "./images/project8.jpg",
-    codeLink: "https://github.com/MohamedOsama2001/Exclusive",
-    demoLink: "https://exclusive-jade.vercel.app/",
+    id: "3",
+    name: "ShoppingCart",
+    descrp: "Based on Java Script",
+    image: "./images/project4.jpg",
+    codeLink: "https://github.com/MohamedOsama2001/online-shopping",
+    demoLink: "https://mohamedosama2001.github.io/online-shopping/",
   },
   {
-    id: "9",
-    name: "Indo Bursa",
-    descrp: "Freelancing Project like OLX based on React JS & Laraval APIs",
-    image: "./images/project9.jpg",
-    codeLink: "https://github.com/MohamedOsama2001/indo_boursa",
-    demoLink: "https://exclusive-jade.vercel.app/",
+    id: "4",
+    name: "To do List",
+    descrp: "Based on Java Script",
+    image: "./images/project6.jpg",
+    codeLink: "https://github.com/MohamedOsama2001/To-Do-List",
+    demoLink: "https://mohamedosama2001.github.io/To-Do-List/",
+  },
+  {
+    id: "5",
+    name: "Egypt Tourism",
+    descrp: "Based on Bootstrap",
+    image: "./images/project3.jpg",
+    codeLink: "https://github.com/MohamedOsama2001/Egypt-Tourism",
+    demoLink: "https://mohamedosama2001.github.io/Egypt-Tourism/",
+  },
+  {
+    id: "6",
+    name: "Rocker",
+    descrp: "Based on HTML5 & CSS3",
+    image: "./images/project2.jpg",
+    codeLink: "https://github.com/MohamedOsama2001/2nd_frontend_project",
+    demoLink: "https://mohamedosama2001.github.io/2nd_frontend_project/",
+  },
+  {
+    id: "7",
+    name: "VivaDecor",
+    descrp: "Based on HTML5 & CSS3",
+    image: "./images/project5.jpg",
+    codeLink: "https://github.com/MohamedOsama2001/LandingPage/",
+    demoLink: "https://mohamedosama2001.github.io/LandingPage/",
+  },
+  {
+    id: "8",
+    name: "landing page",
+    descrp: "Based on HTML & CSS",
+    image: "./images/project1.png",
+    codeLink: "https://github.com/MohamedOsama2001/FirstFrontendProject",
+    demoLink: "https://mohamedosama2001.github.io/FirstFrontendProject/",
   },
 ];
 let projectDiv = document.querySelector(".projects-content .row");
@@ -190,16 +182,23 @@ function drawProjects(projects) {
                     <p class="my-5">${item.descrp}</p>
                     <a
                       class="btn btn-dark"
+                      href=${item.codeLink}
+                      target="_blank"
+                    >
+                      <i class="fab fa-github"></i> Code
+                    </a>
+                    <a
+                      class="btn btn-light ms-3"
                       href=${item.demoLink}
                       target="_blank"
                     >
-                      Visit
+                      <i class="fas fa-globe"></i> Visit
                     </a>
                   </div>
                 </div>
               </div>
         `;
   });
-  projectDiv.innerHTML=proj.join("")
+  projectDiv.innerHTML = proj.join("");
 }
-drawProjects(projects)
+drawProjects(projects);
